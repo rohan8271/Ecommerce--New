@@ -1,0 +1,113 @@
+html{
+    font-size: 10px; /* 16px x  62.5= 10 px= 1 rem */
+    box-sizing: border-box; /* view */
+
+
+}
+
+body{
+    
+    margin:0;
+     height: 100vh; /* viewport height*/
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* layout*/
+.grid-container {  /* view*/
+
+    display: grid;
+    grid-template-areas: /* view*/
+    'header'
+     'main'
+     'footer';
+     grid-template-columns: 1fr;
+     grid-template-rows: 5rem 1fr 5rem;
+     height: 100%;
+
+}
+header{ /* view all */
+    grid-area: header;
+    background-color: black;
+
+}
+main{
+      grid-area:main;
+      background-color:white;
+}
+footer{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    
+}
+h1{
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+h2{
+    font-size: 1.6rem;
+    /* padding: 1rem 0; */
+}
+
+
+
+
+
+a{
+    text-decoration: none;
+    
+}
+  
+a:hover{
+    color: orange;
+}
+header a {
+    color: white;
+    padding: 1rem;             
+}
+.brand{
+    color:white;
+    font-size: 3rem;
+   font-weight: bold;
+}
+.row.center{
+    justify-content: center;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+img{
+
+    border-radius: 1rem;
+}
+img.medium
+{
+  max-width: 30rem;
+  width: 100%;
+  padding: 3rem;;
+}
+ .card{
+     border: 0.2rem #c0c0c0 solid; 
+    background-color: #f8f8f8;
+    border-radius: 0.5rem;
+     margin: 1rem; 
+    
+
+}
+.card-body{
+    padding: 1rem;
+   background-color: rgb(207, 207, 207)
+}
+.card-body > *{
+    margin-bottom: 0.5rem;
+}
+.price
+{
+   font-size: 2rem;
+}

@@ -1,0 +1,301 @@
+html {
+  font-size: 10px; /* 16px x  62.5= 10 px= 1 rem */
+  box-sizing: border-box; /* view */
+}
+
+body {
+  margin: 0;
+  height: 100vh; /* viewport height*/
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+/* layout*/
+.grid-container {
+  /* view*/
+
+  display: grid;
+  grid-template-areas: /* view*/
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 6.3rem 1fr 5rem;
+  height: 100%;
+}
+header {
+  /* view all */
+  grid-area: header;
+  background-color: rgb(0, 167, 218);
+}
+main {
+  grid-area: main;
+  background-color: white;
+}
+footer {
+  grid-area: footer;
+  background-color: rgb(0, 167, 218);
+  color: white;
+}
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2 {
+  font-size: 1.6rem;
+  /* padding: 1rem 0; */
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+  margin-top: 1rem;
+}
+input,
+select,
+textarea,
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+button {
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+input:hover,
+select:hover,
+textarea:hover,
+button:hover {
+  border: 0.1rem #404040 solid;
+}
+button.primary {
+  background-color: rgb(0, 167, 218);
+  font-size: large;
+}
+button.block {
+  width: 100%;
+}
+button.block1 {
+  margin-left: 40%;
+  width: 20%;
+}
+header a {
+  color: white;
+  padding: 1rem;
+}
+.badge {
+  background-color: #f02020;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
+}
+
+.brand {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.row.center {
+  justify-content: center;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.top {
+  align-items: flex-start;
+}
+.col-1 {
+  flex: 1 1 23rem;
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
+
+.min-30 {
+  min-width: 30rem;
+}
+
+img {
+  border-radius: 1rem;
+}
+img.small {
+  max-width: 8rem;
+  width: 100%;
+}
+
+img.medium {
+  max-width: 30rem;
+  width: 100%;
+  padding: 3rem;
+}
+image.large {
+  width: 100%;
+}
+.card {
+  border: 0.2rem #c0c0c0 solid;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body {
+  padding: 1rem;
+  background-color: rgb(216, 216, 216);
+}
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+.price {
+  font-size: 2rem;
+}
+.rating span {
+  color: #a88116;
+  margin: 0.1rem;
+}
+.rating span:last-child {
+  color: #404040;
+}
+
+/* Alert */
+.loading {
+  display: block !important;
+}
+.success {
+  color: #20a020;
+}
+.danger {
+  color: #a02020;
+}
+
+.alert {
+  padding: 1rem;
+  border: 1rem solid transparent;
+  border-radius: 2rem;
+}
+.alert-info {
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+.alert-danger {
+  color: #a02020;
+  background-color: #ffe0e0e0;
+}
+.alert-success {
+  color: #20a020;
+  background-color: #eeffe0;
+}
+.color1 {
+  color: #404040;
+  margin-right: 10%;
+  font-size: 110%;
+  font-family: sans-serif;
+}
+/* Form */
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.form label {
+  margin: 1rem 0;
+}
+/* Dropdown */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #203040;
+  margin: 0;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Checkout steps */
+.checkout-steps > div {
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+.checkout-steps > div.active {
+  border-top-color: orangered;
+  color: orangered;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table tbody tr:nth-of-type(odd) {
+  background-color: #dcf7ff;
+}
+.table td,
+.table th {
+  text-align: left;
+  border: 0.1rem solid #c5e9ff;
+  padding: 0.5rem;
+}
+.table button {
+  margin: 0 0.2rem;
+}
+h3 {
+  color: #20a020;
+  font-size: 2rem;
+}
+
+h4 {
+  color: #a02020;
+  font-size: 2rem;
+}
+.ok1 {
+  border-radius: 4px;
+
+  width: 110px;
+}
+.ok3 {
+  width: 150px;
+}
