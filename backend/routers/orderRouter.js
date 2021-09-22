@@ -3,8 +3,7 @@ import Order from "../models/orderModel.js";
 import { isAdmin, isAuth } from "../utils.js";
 import express from "express";
 import Razorpay from "razorpay";
-const key_id = "rzp_test_aEKLjl6zuBJKqc";
-const key_secret = "BVAYmBxWLIksNU3W5FDYSM9G";
+
 const instance = new Razorpay({ key_id, key_secret });
 const orderRouter = express.Router();
 orderRouter.get(
