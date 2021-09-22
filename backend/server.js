@@ -19,15 +19,14 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/ecommerce", {
   useCreateIndex: true,
 });
 
-//const key_id = "rzp_test_aEKLjl6zuBJKqc";
-//const key_secret = "BVAYmBxWLIksNU3W5FDYSM9G";
+
 //const instance = new Razorpay({ key_id, key_secret });
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 app.use("/api/orders", orderRouter);
 app.get("/api/config/paypal", (req, res) => {
   res.send(
-    /*`${process.env.PAYPAL_CLIENT_ID}`||*/ "AQgOTn_VAsGZgoZyVgcBEpuOPnN20gzkbGw36f7h2KnnRfD3A34O5YP4QydTLefxyJMEZFclGolpBEmQ"
+    /*`${process.env.PAYPAL_CLIENT_ID}`||*/ "?"
   );
 });
 
