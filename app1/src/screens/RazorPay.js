@@ -13,8 +13,7 @@ import {
 } from "../constants/orderConstants";
 //import { PayPalButton } from "react-paypal-button-v2";
 //import { updateProducts } from "../actions/productAction";
-//const key_id = "rzp_test_aEKLjl6zuBJKqc";
-//const key_secret = "BVAYmBxWLIksNU3W5FDYSM9G";
+
 //const instance = new Razorpay({ key_id, key_secret });
 export default function RazorPay(props) {
   const orderId = props.match.params.id;
